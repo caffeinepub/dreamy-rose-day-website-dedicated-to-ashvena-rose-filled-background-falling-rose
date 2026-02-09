@@ -1,0 +1,204 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Dreamy Rose Day single-page dedication for Ashvena",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Replace the current Valentine proposal flow with a single-page dreamy Rose Day website dedicated to Ashvena with the exact hero heading text.",
+      "acceptanceCriteria": [
+        "Visiting the app shows a Rose Day page (not the Valentine proposal buttons flow).",
+        "The primary hero heading text matches exactly: \"🌹 Happy Rose Day, My Love Ashvena 🌹\".",
+        "The page uses soft, romantic motion (subtle fades/float/pulse) and a pastel/glow aesthetic consistent across sections."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/RoseDay.tsx",
+          "operation": "create",
+          "description": "Create the new single-page Rose Day experience with the exact hero heading text and a cohesive soft/romantic layout that will host the background, falling roses, interactive roses, special love message, and closing section."
+        },
+        {
+          "path": "frontend/src/pages/ValentineProposal.tsx",
+          "operation": "rename",
+          "description": "Rename the current Valentine proposal page file to frontend/src/pages/RoseDay.tsx and refactor its content into the Rose Day single-page experience (removing the proposal yes/no flow and any navigation-away behavior)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the app to render the new RoseDay page instead of the previous ValentineProposal experience so the Rose Day page is the default view."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add a realistic rose-garden background with soft pastel glow overlay and a smooth, continuous falling roses/petals animation layer across the whole page.",
+      "acceptanceCriteria": [
+        "The page background is dominated by realistic roses in red/pink/white (not flat icons only).",
+        "A continuous falling animation of roses/petals is visible from the top of the viewport to the bottom.",
+        "Animations are smooth and non-jarring (no strobing), and do not block scrolling or interactions."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/rose-garden-background.dim_1920x1080.png",
+          "operation": "create",
+          "description": "Add the generated realistic rose garden background asset at frontend/public/assets/generated/rose-garden-background.dim_1920x1080.png and wire it as the primary page background."
+        },
+        {
+          "path": "frontend/public/assets/generated/rose-red-icon.dim_256x256.png",
+          "operation": "create",
+          "description": "Add the generated red rose cutout asset at frontend/public/assets/generated/rose-red-icon.dim_256x256.png for use in falling roses and interactive roses."
+        },
+        {
+          "path": "frontend/public/assets/generated/rose-pink-icon.dim_256x256.png",
+          "operation": "create",
+          "description": "Add the generated pink rose cutout asset at frontend/public/assets/generated/rose-pink-icon.dim_256x256.png for use in falling roses and interactive roses."
+        },
+        {
+          "path": "frontend/public/assets/generated/rose-white-icon.dim_256x256.png",
+          "operation": "create",
+          "description": "Add the generated white rose cutout asset at frontend/public/assets/generated/rose-white-icon.dim_256x256.png for use in falling roses and interactive roses."
+        },
+        {
+          "path": "frontend/src/components/FallingRoses.tsx",
+          "operation": "create",
+          "description": "Create a full-viewport, pointer-events-none FallingRoses layer that continuously animates rose/petal elements from top to bottom using the realistic rose icon assets, ensuring smooth motion and no interaction blocking."
+        },
+        {
+          "path": "frontend/src/pages/RoseDay.tsx",
+          "operation": "modify",
+          "description": "Apply the rose-garden background image with a soft pastel glow overlay and mount the FallingRoses layer across the entire page while preserving scroll and click interactions."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add/adjust global dreamy rose-day keyframes/utilities (e.g., gentle fall, subtle float, soft glow overlay helpers) to support smooth, non-jarring falling animation and background glow."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Add an Interactive Roses section with multiple clickable roses that reveal sweet messages; messages vary per rose and clicks cycle through available messages, including all required lines verbatim.",
+      "acceptanceCriteria": [
+        "The Interactive Roses section renders multiple rose elements that are clearly clickable.",
+        "Clicking a rose reveals a message (e.g., tooltip/popover/card) without navigating away.",
+        "All listed messages appear in the app exactly as provided.",
+        "Different roses show different messages (not all roses always showing the same line)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/InteractiveRosesSection.tsx",
+          "operation": "create",
+          "description": "Create the Interactive Roses section with multiple clickable rose UI elements (using the realistic rose icon assets) and per-rose message cycling logic that includes these verbatim options: “I love you Jnu ❤️”, “You are my favorite rose 🌹”, “Forever yours, Ashvena”, “My heart blooms for you”, “Every rose reminds me of you”, “You are my always”, “One rose, endless love”. Use shadcn-ui components (e.g., Card/Popover/Button if available) to present revealed messages with consistent styling; Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/RoseDay.tsx",
+          "operation": "modify",
+          "description": "Wire the InteractiveRosesSection into the Rose Day page as a dedicated section without route/navigation changes."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add hover and focus-visible styling utilities for rose buttons (soft glow on hover, accessible focus ring) to make roses clearly interactive while keeping the dreamy aesthetic."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add a highlighted Special Love message area showing the dedication text exactly as provided.",
+      "acceptanceCriteria": [
+        "A distinct, highlighted message box is present on the page.",
+        "The dedication text matches exactly and is easy to read over the background."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/RoseDay.tsx",
+          "operation": "modify",
+          "description": "Add a visually distinct highlighted 'Special Love' message box with the exact text: \"Ashvena, just like roses, my love for you grows more beautiful every day. Happy Rose Day, my Jnu ❤️\". Use a readable overlay treatment appropriate for the rose-filled background; optionally use a shadcn-ui Card component to provide a polished container; Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add/adjust styling helpers for a readable highlighted message treatment (soft glass/pastel overlay, subtle border/glow) that remains legible over the background."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add extra romantic decorative layers (floating hearts and sparkles), hover glow over roses, and a final closing section with the exact closing line text.",
+      "acceptanceCriteria": [
+        "Floating hearts are visible (can reuse the existing floating hearts approach) and do not interfere with clicking roses.",
+        "Sparkles (animated or twinkling) are visible as a separate decorative layer.",
+        "Hovering a rose produces a soft glow effect.",
+        "A final section exists and the closing line text matches exactly."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/sparkle-particle.dim_64x64.png",
+          "operation": "create",
+          "description": "Add the generated sparkle/bokeh particle asset at frontend/public/assets/generated/sparkle-particle.dim_64x64.png for use in the sparkles layer."
+        },
+        {
+          "path": "frontend/src/components/SparklesLayer.tsx",
+          "operation": "create",
+          "description": "Create a full-viewport, pointer-events-none SparklesLayer that places and animates/twinkles sparkle particles using frontend/public/assets/generated/sparkle-particle.dim_64x64.png with gentle, non-distracting motion."
+        },
+        {
+          "path": "frontend/src/pages/RoseDay.tsx",
+          "operation": "modify",
+          "description": "Wire in the existing FloatingHearts component and the new SparklesLayer as decorative layers that do not interfere with clicking the interactive roses, and add the final closing section text exactly: \"This garden of roses is only for you, Ashvena 🌹\"."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Ensure rose hover glow is implemented consistently (including interactive rose elements) and add any required sparkle/twinkle animation utilities while keeping motion calm and non-jarring."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Use elegant cursive typography for headings/messages and update the document title to reference Rose Day/Ashvena.",
+      "acceptanceCriteria": [
+        "Love messages and/or key headings use a cursive font family, with sensible fallbacks.",
+        "The browser tab title is no longer \"Valentine's Day Proposal Website\" and clearly references Rose Day and/or Ashvena."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Update the document <title> to clearly reference Rose Day and Ashvena, replacing the existing \"Valentine's Day Proposal Website\" title. Also add any required font-loading tags (e.g., a cursive webfont) to support elegant cursive typography."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add global font-family utilities (elegant cursive for headings/love messages with readable fallbacks) and apply them via reusable classes used by the Rose Day page/sections."
+        },
+        {
+          "path": "frontend/src/pages/RoseDay.tsx",
+          "operation": "modify",
+          "description": "Apply the cursive typography styling to the hero heading and key love messages while preserving readability (sizes/contrast/line-height) over the rose-filled background."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Add optional calm romantic background music with a user-controlled play/pause toggle that does not autoplay.",
+      "acceptanceCriteria": [
+        "There is a visible play/pause (or music on/off) control.",
+        "Music does not autoplay; it starts only after user interaction.",
+        "Toggling reliably plays/pauses and does not spawn multiple audio streams."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/BackgroundMusicToggle.tsx",
+          "operation": "create",
+          "description": "Create a reusable BackgroundMusicToggle component that manages a single audio instance (no autoplay; start only on explicit user interaction), provides a clear play/pause UI, and reliably toggles playback without spawning multiple streams. Optionally use shadcn-ui Button for consistent styling; Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/RoseDay.tsx",
+          "operation": "modify",
+          "description": "Wire the BackgroundMusicToggle into the Rose Day page in a visible, non-intrusive position (e.g., fixed corner control) and ensure it does not overlap or block the interactive roses."
+        }
+      ]
+    }
+  ]
+}

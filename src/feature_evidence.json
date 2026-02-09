@@ -1,0 +1,143 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-replace-the-current-valentine-proposal-experience-with-a-single-page-rose-day-website-dedicated-to-ashvena-with-the-main-heading-exactly-happy-rose-day-my-love-ashvena-and-an-overall-dreamy-soft-romantic-feel",
+      "featureTitle": "Replace the current Valentine proposal experience with a single-page Rose Day website dedicated to Ashvena, with the main heading exactly: \"🌹 Happy Rose Day, My Love Ashvena 🌹\" and an overall dreamy, soft, romantic feel.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/RoseDay.tsx",
+        "frontend/src/pages/ValentineProposal.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-rose-filled-background-that-visually-reads-as-hundreds-of-realistic-red-pink-and-white-roses-with-a-soft-pastel-glow-overlay-and-add-an-animated-layer-of-roses-petals-gently-falling-from-the-top-of-the-screen-across-the-entire-page",
+      "featureTitle": "Create a rose-filled background that visually reads as \"hundreds of realistic red, pink, and white roses\" with a soft pastel glow overlay, and add an animated layer of roses/petals gently falling from the top of the screen across the entire page.",
+      "files": [
+        "frontend/src/components/FallingRoses.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/RoseDay.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-an-interactive-roses-section-containing-multiple-clickable-roses-clicking-a-rose-reveals-a-short-sweet-message-with-different-messages-across-roses-and-repeated-clicks-cycling-through-the-available-messages-for-that-rose-or-showing-another-message-deterministically-per-rose-include-at-least-these-messages-verbatim-as-options-i-love-you-jnu-you-are-my-favorite-rose-forever-yours-ashvena-my-heart-blooms-for-you-every-rose-reminds-me-of-you-you-are-my-always-one-rose-endless-love",
+      "featureTitle": "Add an \"Interactive Roses\" section containing multiple clickable roses; clicking a rose reveals a short sweet message, with different messages across roses and repeated clicks cycling through the available messages for that rose (or showing another message deterministically per-rose). Include at least these messages verbatim as options: “I love you Jnu ❤️”, “You are my favorite rose 🌹”, “Forever yours, Ashvena”, “My heart blooms for you”, “Every rose reminds me of you”, “You are my always”, “One rose, endless love”.",
+      "files": [
+        "frontend/src/components/InteractiveRosesSection.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/RoseDay.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-special-love-highlighted-message-area-that-displays-the-following-text-exactly-ashvena-just-like-roses-my-love-for-you-grows-more-beautiful-every-day-happy-rose-day-my-jnu",
+      "featureTitle": "Add a \"Special Love\" highlighted message area that displays the following text exactly: \"Ashvena, just like roses, my love for you grows more beautiful every day. Happy Rose Day, my Jnu ❤️\"",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/src/pages/RoseDay.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-extra-romantic-visual-elements-across-the-page-floating-hearts-sparkles-soft-glow-on-hover-over-roses-and-a-final-closing-section-that-displays-exactly-this-garden-of-roses-is-only-for-you-ashvena",
+      "featureTitle": "Add extra romantic visual elements across the page: floating hearts, sparkles, soft glow on hover over roses, and a final closing section that displays exactly: \"This garden of roses is only for you, Ashvena 🌹\"",
+      "files": [
+        "frontend/src/components/SparklesLayer.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/RoseDay.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-use-elegant-cursive-typography-for-love-messages-headings-while-maintaining-readability-and-update-the-document-title-in-the-html-head-to-reflect-the-rose-day-dedication-to-ashvena",
+      "featureTitle": "Use elegant cursive typography for love messages/headings (while maintaining readability) and update the document title in the HTML head to reflect the Rose Day dedication to Ashvena.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/index.css",
+        "frontend/src/pages/RoseDay.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-provide-optional-calm-romantic-background-music-with-a-user-controlled-play-pause-toggle-do-not-autoplay-on-load",
+      "featureTitle": "Provide optional calm romantic background music with a user-controlled play/pause toggle (do not autoplay on load).",
+      "files": [
+        "frontend/src/components/BackgroundMusicToggle.tsx",
+        "frontend/src/pages/RoseDay.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a dreamy, romantic Rose Day website dedicated to Ashvena featuring a rose-filled background, falling roses animation, interactive clickable roses with rotating love messages, romantic typography/animations, optional background music, and extra romantic visual elements (hearts/sparkles) for sharing as a link.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Realistic rose garden background with many red/pink/white roses, soft dreamy lighting (rose-garden-background.dim_1920x1080.png)\n- Single realistic red rose cutout on transparent background (rose-red-icon.dim_256x256.png)\n- Single realistic pink rose cutout on transparent background (rose-pink-icon.dim_256x256.png)\n- Single realistic white rose cutout on transparent background (rose-white-icon.dim_256x256.png)\n- Soft sparkle / bokeh light particle on transparent background (sparkle-particle.dim_64x64.png)",
+  "existing_features": [
+    {
+      "id": "feature-replace-the-current-valentine-proposal-experience-with-a-single-page-rose-day-website-dedicated-to-ashvena-with-the-main-heading-exactly-happy-rose-day-my-love-ashvena-and-an-overall-dreamy-soft-romantic-feel",
+      "title": "Replace the current Valentine proposal experience with a single-page Rose Day website dedicated to Ashvena, with the main heading exactly: \"🌹 Happy Rose Day, My Love Ashvena 🌹\" and an overall dreamy, soft, romantic feel.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-rose-filled-background-that-visually-reads-as-hundreds-of-realistic-red-pink-and-white-roses-with-a-soft-pastel-glow-overlay-and-add-an-animated-layer-of-roses-petals-gently-falling-from-the-top-of-the-screen-across-the-entire-page",
+      "title": "Create a rose-filled background that visually reads as \"hundreds of realistic red, pink, and white roses\" with a soft pastel glow overlay, and add an animated layer of roses/petals gently falling from the top of the screen across the entire page.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-interactive-roses-section-containing-multiple-clickable-roses-clicking-a-rose-reveals-a-short-sweet-message-with-different-messages-across-roses-and-repeated-clicks-cycling-through-the-available-messages-for-that-rose-or-showing-another-message-deterministically-per-rose-include-at-least-these-messages-verbatim-as-options-i-love-you-jnu-you-are-my-favorite-rose-forever-yours-ashvena-my-heart-blooms-for-you-every-rose-reminds-me-of-you-you-are-my-always-one-rose-endless-love",
+      "title": "Add an \"Interactive Roses\" section containing multiple clickable roses; clicking a rose reveals a short sweet message, with different messages across roses and repeated clicks cycling through the available messages for that rose (or showing another message deterministically per-rose). Include at least these messages verbatim as options: “I love you Jnu ❤️”, “You are my favorite rose 🌹”, “Forever yours, Ashvena”, “My heart blooms for you”, “Every rose reminds me of you”, “You are my always”, “One rose, endless love”.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-special-love-highlighted-message-area-that-displays-the-following-text-exactly-ashvena-just-like-roses-my-love-for-you-grows-more-beautiful-every-day-happy-rose-day-my-jnu",
+      "title": "Add a \"Special Love\" highlighted message area that displays the following text exactly: \"Ashvena, just like roses, my love for you grows more beautiful every day. Happy Rose Day, my Jnu ❤️\"",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-extra-romantic-visual-elements-across-the-page-floating-hearts-sparkles-soft-glow-on-hover-over-roses-and-a-final-closing-section-that-displays-exactly-this-garden-of-roses-is-only-for-you-ashvena",
+      "title": "Add extra romantic visual elements across the page: floating hearts, sparkles, soft glow on hover over roses, and a final closing section that displays exactly: \"This garden of roses is only for you, Ashvena 🌹\"",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-use-elegant-cursive-typography-for-love-messages-headings-while-maintaining-readability-and-update-the-document-title-in-the-html-head-to-reflect-the-rose-day-dedication-to-ashvena",
+      "title": "Use elegant cursive typography for love messages/headings (while maintaining readability) and update the document title in the HTML head to reflect the Rose Day dedication to Ashvena.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-provide-optional-calm-romantic-background-music-with-a-user-controlled-play-pause-toggle-do-not-autoplay-on-load",
+      "title": "Provide optional calm romantic background music with a user-controlled play/pause toggle (do not autoplay on load).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create Rose Day website dedicated to Ashvena with dreamy/soft romantic theme and main heading text",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Rose-filled background (hundreds of realistic red/pink/white roses) with pastel glow aesthetic and smooth romantic animations",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Falling roses/petals animation from top of screen",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Interactive roses section: clickable roses showing a different sweet message per click/rose",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Special love area: highlighted message box with provided long dedication text",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Extra romantic elements: floating hearts, sparkles, and hover glow on roses",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Final section with closing line: 'This garden of roses is only for you, Ashvena 🌹'",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Optional calm romantic background music",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Dreamy Rose Day website dedicated to Ashvena (rose-filled background, falling roses, clickable love messages)",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

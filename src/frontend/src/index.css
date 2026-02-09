@@ -1,0 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.625rem;
+        
+        /* Rose Day Color Palette - Soft, Dreamy, Romantic */
+        --rose-pastel-light: 0.96 0.06 15;
+        --rose-pastel-medium: 0.92 0.08 10;
+        --rose-pastel-accent: 0.94 0.07 350;
+        --rose-primary: 0.60 0.20 15;
+        --rose-accent: 0.65 0.18 350;
+        --rose-dark: 0.40 0.12 10;
+        --rose-text: 0.45 0.10 15;
+        
+        /* Base colors */
+        --background: 1 0 0;
+        --foreground: 0.145 0 0;
+        --card: 1 0 0;
+        --card-foreground: 0.145 0 0;
+        --popover: 1 0 0;
+        --popover-foreground: 0.145 0 0;
+        --primary: 0.60 0.20 15;
+        --primary-foreground: 0.985 0 0;
+        --secondary: 0.97 0 0;
+        --secondary-foreground: 0.205 0 0;
+        --muted: 0.97 0 0;
+        --muted-foreground: 0.556 0 0;
+        --accent: 0.97 0 0;
+        --accent-foreground: 0.205 0 0;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        --border: 0.922 0 0;
+        --input: 0.922 0 0;
+        --ring: 0.708 0 0;
+        --chart-1: 0.646 0.222 41.116;
+        --chart-2: 0.6 0.118 184.704;
+        --chart-3: 0.398 0.07 227.392;
+        --chart-4: 0.828 0.189 84.429;
+        --chart-5: 0.769 0.188 70.08;
+        --sidebar: 0.985 0 0;
+        --sidebar-foreground: 0.145 0 0;
+        --sidebar-primary: 0.205 0 0;
+        --sidebar-primary-foreground: 0.985 0 0;
+        --sidebar-accent: 0.97 0 0;
+        --sidebar-accent-foreground: 0.205 0 0;
+        --sidebar-border: 0.922 0 0;
+        --sidebar-ring: 0.708 0 0;
+    }
+
+    .dark {
+        --background: 0.145 0 0;
+        --foreground: 0.985 0 0;
+        --card: 0.205 0 0;
+        --card-foreground: 0.985 0 0;
+        --popover: 0.269 0 0;
+        --popover-foreground: 0.985 0 0;
+        --primary: 0.922 0 0;
+        --primary-foreground: 0.205 0 0;
+        --secondary: 0.269 0 0;
+        --secondary-foreground: 0.985 0 0;
+        --muted: 0.269 0 0;
+        --muted-foreground: 0.708 0 0;
+        --accent: 0.371 0 0;
+        --accent-foreground: 0.985 0 0;
+        --destructive: 0.704 0.191 22.216;
+        --destructive-foreground: 0.205 0 0;
+        --border: 1 0 0 / 10%;
+        --input: 1 0 0 / 15%;
+        --ring: 0.556 0 0;
+        --chart-1: 0.488 0.243 264.376;
+        --chart-2: 0.696 0.17 162.48;
+        --chart-3: 0.769 0.188 70.08;
+        --chart-4: 0.627 0.265 303.9;
+        --chart-5: 0.645 0.246 16.439;
+        --sidebar: 0.205 0 0;
+        --sidebar-foreground: 0.985 0 0;
+        --sidebar-primary: 0.488 0.243 264.376;
+        --sidebar-primary-foreground: 0.985 0 0;
+        --sidebar-accent: 0.269 0 0;
+        --sidebar-accent-foreground: 0.985 0 0;
+        --sidebar-border: 1 0 0 / 10%;
+        --sidebar-ring: 0.439 0 0;
+    }
+
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+@layer utilities {
+    /* Rose Day themed animations */
+    @keyframes float-up {
+        0% {
+            transform: translateY(100vh) rotate(0deg);
+            opacity: 0;
+        }
+        10% {
+            opacity: 0.5;
+        }
+        90% {
+            opacity: 0.5;
+        }
+        100% {
+            transform: translateY(-100vh) rotate(360deg);
+            opacity: 0;
+        }
+    }
+
+    @keyframes fall-gentle {
+        0% {
+            transform: translateY(-100px) rotate(0deg);
+            opacity: 0;
+        }
+        10% {
+            opacity: 0.7;
+        }
+        90% {
+            opacity: 0.7;
+        }
+        100% {
+            transform: translateY(100vh) rotate(360deg);
+            opacity: 0;
+        }
+    }
+
+    @keyframes float-gentle {
+        0%, 100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-15px);
+        }
+    }
+
+    @keyframes pulse-gentle {
+        0%, 100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        50% {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+    }
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slide-up {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes bounce-in {
+        0% {
+            opacity: 0;
+            transform: scale(0.3);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+        70% {
+            transform: scale(0.95);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes scale-in {
+        from {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes twinkle {
+        0%, 100% {
+            opacity: 0.3;
+            transform: scale(0.8);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+    }
+
+    .animate-float-up {
+        animation: float-up linear infinite;
+    }
+
+    .animate-fall-gentle {
+        animation: fall-gentle linear infinite;
+    }
+
+    .animate-float-gentle {
+        animation: float-gentle 3s ease-in-out infinite;
+    }
+
+    .animate-pulse-gentle {
+        animation: pulse-gentle 3s ease-in-out infinite;
+    }
+
+    .animate-fade-in {
+        animation: fade-in 1s ease-out;
+    }
+
+    .animate-slide-up {
+        animation: slide-up 1s ease-out 0.3s both;
+    }
+
+    .animate-bounce-in {
+        animation: bounce-in 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+    }
+
+    .animate-scale-in {
+        animation: scale-in 0.4s ease-out;
+    }
+
+    .animate-twinkle {
+        animation: twinkle ease-in-out infinite;
+    }
+
+    /* Custom font utilities */
+    .font-cursive {
+        font-family: 'Dancing Script', 'Great Vibes', cursive;
+        font-weight: 600;
+    }
+
+    /* Custom shadow effects */
+    .drop-shadow-glow {
+        filter: drop-shadow(0 0 20px rgba(255, 182, 193, 0.6));
+    }
+
+    .drop-shadow-rose-glow {
+        filter: drop-shadow(0 0 30px rgba(255, 105, 135, 0.8));
+    }
+
+    .shadow-rose-glow {
+        box-shadow: 0 0 40px rgba(255, 105, 135, 0.4);
+    }
+}

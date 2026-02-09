@@ -1,0 +1,157 @@
+{
+  "kind": "build_request",
+  "title": "Dreamy Rose Day website dedicated to Ashvena (rose-filled background, falling roses, clickable love messages)",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Replace the current Valentine proposal experience with a single-page Rose Day website dedicated to Ashvena, with the main heading exactly: \"🌹 Happy Rose Day, My Love Ashvena 🌹\" and an overall dreamy, soft, romantic feel.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-9"
+        ],
+        "quotes": [
+          "Create a highly romantic and beautiful Rose Day website dedicated to Ashvena.",
+          "Main Heading: 🌹 Happy Rose Day, My Love Ashvena 🌹",
+          "The entire website should feel dreamy, soft, and full of love."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Visiting the app shows a Rose Day page (not the Valentine proposal buttons flow).",
+        "The primary hero heading text matches exactly: \"🌹 Happy Rose Day, My Love Ashvena 🌹\".",
+        "The page uses soft, romantic motion (subtle fades/float/pulse) and a pastel/glow aesthetic consistent across sections."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create a rose-filled background that visually reads as \"hundreds of realistic red, pink, and white roses\" with a soft pastel glow overlay, and add an animated layer of roses/petals gently falling from the top of the screen across the entire page.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-9"
+        ],
+        "quotes": [
+          "Background filled with hundreds of realistic red, pink, and white roses",
+          "Roses gently falling from the top of the screen like petals",
+          "Soft pastel colors, glowing lights, and smooth romantic animations"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The page background is dominated by realistic roses in red/pink/white (not flat icons only).",
+        "A continuous falling animation of roses/petals is visible from the top of the viewport to the bottom.",
+        "Animations are smooth and non-jarring (no strobing), and do not block scrolling or interactions."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add an \"Interactive Roses\" section containing multiple clickable roses; clicking a rose reveals a short sweet message, with different messages across roses and repeated clicks cycling through the available messages for that rose (or showing another message deterministically per-rose). Include at least these messages verbatim as options: “I love you Jnu ❤️”, “You are my favorite rose 🌹”, “Forever yours, Ashvena”, “My heart blooms for you”, “Every rose reminds me of you”, “You are my always”, “One rose, endless love”.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-9"
+        ],
+        "quotes": [
+          "Interactive Roses Section:\nEach rose is clickable\nWhen clicked, a short sweet message appears, such as:\n“I love you Jnu ❤️”\n“You are my favorite rose 🌹”\n“Forever yours, Ashvena”\n“My heart blooms for you”\n“Every rose reminds me of you”\n“You are my always”\n“One rose, endless love”\nDifferent message on every rose"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The Interactive Roses section renders multiple rose elements that are clearly clickable.",
+        "Clicking a rose reveals a message (e.g., tooltip/popover/card) without navigating away.",
+        "All listed messages appear in the app exactly as provided.",
+        "Different roses show different messages (not all roses always showing the same line)."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add a \"Special Love\" highlighted message area that displays the following text exactly: \"Ashvena, just like roses, my love for you grows more beautiful every day. Happy Rose Day, my Jnu ❤️\"",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-9"
+        ],
+        "quotes": [
+          "Special Love Area:\nA highlighted message box saying:\n“Ashvena, just like roses, my love for you grows more beautiful every day. Happy Rose Day, my Jnu ❤️”"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A distinct, highlighted message box is present on the page.",
+        "The dedication text matches exactly and is easy to read over the background."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Add extra romantic visual elements across the page: floating hearts, sparkles, soft glow on hover over roses, and a final closing section that displays exactly: \"This garden of roses is only for you, Ashvena 🌹\"",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-9"
+        ],
+        "quotes": [
+          "Extra Romantic Elements:\nFloating hearts and sparkles\nSoft glow when hovering over roses\nA final section that says:\n“This garden of roses is only for you, Ashvena 🌹”"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Floating hearts are visible (can reuse the existing floating hearts approach) and do not interfere with clicking roses.",
+        "Sparkles (animated or twinkling) are visible as a separate decorative layer.",
+        "Hovering a rose produces a soft glow effect.",
+        "A final section exists and the closing line text matches exactly."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Use elegant cursive typography for love messages/headings (while maintaining readability) and update the document title in the HTML head to reflect the Rose Day dedication to Ashvena.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-9"
+        ],
+        "quotes": [
+          "Elegant cursive fonts for love messages"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Love messages and/or key headings use a cursive font family, with sensible fallbacks.",
+        "The browser tab title is no longer \"Valentine's Day Proposal Website\" and clearly references Rose Day and/or Ashvena."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Provide optional calm romantic background music with a user-controlled play/pause toggle (do not autoplay on load).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-9"
+        ],
+        "quotes": [
+          "Calm romantic background music (optional)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "There is a visible play/pause (or music on/off) control.",
+        "Music does not autoplay; it starts only after user interaction.",
+        "Toggling reliably plays/pauses and does not spawn multiple audio streams."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend files under immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
+    "Backend must remain a single Motoko actor in backend/main.mo; only add migration.mo if an upgrade requires state migration.",
+    "Use English for any user-facing text in the build request."
+  ],
+  "nonGoals": [
+    "Do not add user accounts, Internet Identity login flows, or any backend data persistence for the messages (keep it purely frontend unless required).",
+    "Do not implement real-time or multiplayer features.",
+    "Do not integrate third-party auth providers or external databases."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Realistic rose garden background with many red/pink/white roses, soft dreamy lighting (rose-garden-background.dim_1920x1080.png)",
+      "Single realistic red rose cutout on transparent background (rose-red-icon.dim_256x256.png)",
+      "Single realistic pink rose cutout on transparent background (rose-pink-icon.dim_256x256.png)",
+      "Single realistic white rose cutout on transparent background (rose-white-icon.dim_256x256.png)",
+      "Soft sparkle / bokeh light particle on transparent background (sparkle-particle.dim_64x64.png)"
+    ],
+    "edits": []
+  }
+}

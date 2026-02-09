@@ -1,0 +1,16 @@
+{
+  "frontend/src/App.tsx": "Main application component that wraps the RoseDay page with ThemeProvider for consistent styling.",
+  "frontend/src/pages/ValentineProposal.tsx": "Core Valentine's Day proposal page with interactive \"Yes/No\" buttons, playful fallback buttons, background music toggle, and celebration screen trigger.",
+  "frontend/src/components/FloatingHearts.tsx": "Decorative component that renders animated floating heart emojis across the screen with randomized positions and timing.",
+  "frontend/src/components/CelebrationScreen.tsx": "Full-screen celebration component displayed after \"Yes\" is clicked, featuring confetti, animated hearts, and success message.",
+  "frontend/src/components/Confetti.tsx": "Confetti animation component that generates and animates colorful falling confetti pieces.",
+  "frontend/src/index.css": "Global styles with Rose Day color palette using OKLCH color system, custom animations (falling roses, floating, twinkling sparkles, gentle pulses), cursive font utilities, and romantic glow shadow effects.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with Rose Day themed color tokens (soft pastels, rose primary/accent/dark) and cursive font family for consistent romantic design throughout the application.",
+  "frontend/src/hooks/useQueries.ts": "Empty file as no backend queries are required for this frontend-only application.",
+  "frontend/index.html": "HTML entry point with updated title \"Happy Rose Day, Ashvena 🌹\" and Google Fonts links for elegant cursive typography (Dancing Script and Great Vibes).",
+  "frontend/src/pages/RoseDay.tsx": "Complete Rose Day dedication page featuring hero heading, special love message box, interactive roses section, falling roses/hearts/sparkles layers, background music toggle, and closing section with all exact text as requested.",
+  "frontend/src/components/FallingRoses.tsx": "Full-viewport decorative layer that continuously animates realistic rose images (red, pink, white) falling from top to bottom with smooth, randomized motion and no interaction blocking.",
+  "frontend/src/components/SparklesLayer.tsx": "Full-viewport decorative layer that places and animates sparkle particles with gentle twinkling effects across the page without blocking interactions.",
+  "frontend/src/components/InteractiveRosesSection.tsx": "Grid of 12 clickable rose buttons that reveal unique love messages in cards when clicked, with hover glow effects and smooth animations.",
+  "frontend/src/components/BackgroundMusicToggle.tsx": "Fixed-position music control button that manages a single audio instance with play/pause toggle, no autoplay, and clear visual feedback."
+}

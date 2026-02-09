@@ -1,2 +1,3 @@
-# dreamy-rose-day-website-dedicated-to-ashvena-rose-filled-background-falling-rose
-Exported from Caffeine project: Dreamy Rose Day website dedicated to Ashvena (rose-filled background, falling roses, clickable love messages)
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`
